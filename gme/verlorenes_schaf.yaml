@@ -1,0 +1,221 @@
+product-id: 777
+media-path: oggs/%s
+comment: Eine Rallye zum Gleichnis vom verlorenen Schaf
+welcome: s0_startknopf
+# Spiellogik
+scripts:
+  # Start und eine kleine Hilfe
+  # Es beginnt die Geschichte
+  s0-hilfe:
+  - P(s0_hilfe)
+  s0-play:
+  - P(s0_play) P(s0_anweisung)
+  s0-maeh:
+  - P(s0_maeh)
+  s0-hirte:
+  - P(s0_hirte)
+  # Station 1:
+  # Finde die 5 Fehler im unteren Bild im Unterschied zum oberen
+  s1-play:
+  - P(s1_play) $s1ge:=1 J(spiel1)
+  s1-restart:
+  - $s1ge==0? P(s5_erstgeschichte)
+  - $s1c:=0 $s1f1:=0 $s1f2:=0 $s1f3:=0 $s1f4:=0 $s1f5:=0 J(spiel1)
+  s1-blind:
+  - $s1ge==0? P(s5_erstgeschichte)
+  - P(s1_blind)
+  s1-fehler-gras:
+  - $s1ge==0? P(s5_erstgeschichte)
+  - $s1f1==0? $s1f1:=1 J(spiel1_fund)
+  - $s1f1==1? P(s1_nochmal)
+  s1-fehler-schaf:
+  - $s1ge==0? P(s5_erstgeschichte)
+  - $s1f2==0? $s1f2:=1 J(spiel1_fund)
+  - $s1f2==1? P(s1_nochmal)
+  s1-fehler-bein:
+  - $s1ge==0? P(s5_erstgeschichte)
+  - $s1f3==0? $s1f3:=1 J(spiel1_fund)
+  - $s1f3==1? P(s1_nochmal)
+  s1-fehler-schuh:
+  - $s1ge==0? P(s5_erstgeschichte)
+  - $s1f4==0? $s1f4:=1 J(spiel1_fund)
+  - $s1f4==1? P(s1_nochmal)
+  s1-fehler-auge:
+  - $s1ge==0? P(s5_erstgeschichte)
+  - $s1f5==0? $s1f5:=1 J(spiel1_fund)
+  - $s1f5==1? P(s1_nochmal)
+  spiel1:
+  - P(s1_spiel)
+  spiel1_fund:
+  - $s1c==0? $s1c:=1 P(s1_fund1)
+  - $s1c==1? $s1c:=2 P(s1_fund2)
+  - $s1c==2? $s1c:=3 P(s1_fund3)
+  - $s1c==3? $s1c:=4 P(s1_fund4)
+  - $s1c==4? P(s1_fund5) P(s1_anweisung)
+  ### Station 2 ###
+  # Was braucht der Hirte?
+  # 4 Gegenstände sind richtig, 4 falsch
+  # nach 2 falschen Gegenständen beginnt das Spiel 2 von vorne
+  s2-play:
+  - P(s2_play) $s2ge:=1 J(s2_restart)
+  s2_restart:
+  - $s2ge==0? P(s5_erstgeschichte)
+  - $s2c:=0 $s2f1:=0 $s2f2:=0 $s2f3:=0 $s2f4:=0 $s2ff:=0 J(spiel2)
+  s2-stab:
+  - $s2ge==0? P(s5_erstgeschichte)
+  - $s2f1==0? $s2f1:=1 J(spiel2_fund)
+  - $s2f1==1? P(s2_nochmal)
+  s2-schuhe:
+  - $s2ge==0? P(s5_erstgeschichte)
+  - $s2f2==0? $s2f2:=1 J(spiel2_fund)
+  - $s2f2==1? P(s2_nochmal)
+  s2-bogen:
+  - $s2ge==0? P(s5_erstgeschichte)
+  - J(spiel2_falsch)
+  s2-seil:
+  - $s2ge==0? P(s5_erstgeschichte)
+  - $s2f3==0? $s2f3:=1 J(spiel2_fund)
+  - $s2f3==1? P(s2_nochmal)
+  s2-ball:
+  - $s2ge==0? P(s5_erstgeschichte)
+  - J(spiel2_falsch)
+  s2-saebel:
+  - $s2ge==0? P(s5_erstgeschichte)
+  - J(spiel2_falsch)
+  s2-trompete:
+  - $s2ge==0? P(s5_erstgeschichte)
+  - J(spiel2_falsch)
+  s2-hund:
+  - $s2ge==0? P(s5_erstgeschichte)
+  - $s2f4==0? $s2f4:=1 J(spiel2_fund)
+  - $s2f4==1? P(s2_nochmal)
+  spiel2:
+  - P(s2_spiel)
+  spiel2_fund:
+  - $s2c==0? $s2c:=1 P(s2_fund1)
+  - $s2c==1? $s2c:=2 P(s2_fund2)
+  - $s2c==2? $s2c:=3 P(s2_fund3)
+  - $s2c==3? P(s2_fund4) P(s2_anweisung)
+  spiel2_falsch:
+  - $s2ff==0? $s2ff:=1 P(s2_ff1)
+  - $s2ff==1? P(s2_ff2) J(s2_restart)
+  ### Station 3: ###
+  # Welcher Spur folgt der Hirte?
+  # Fragen werden mit Stern oder Quadrat beantwortet
+  # nach 2 falschen Antworten beginnt das Spiel 3 von vorne
+  s3-play:
+  - P(s3_play) $s3ge:=1 J(s3_restart)
+  s3_restart:
+  - $s3ge==0? P(s5_erstgeschichte)
+  - $s3fr:=0 $s3ffk:=0 J(spiel3)
+  s3-hirte:
+  - P(s3_hirte)
+  s3-stern:
+  - $s3ge==0? P(s5_erstgeschichte)
+  - $s3fr==0? $s3fr:=1 J(spiel3_falsch)
+  - $s3fr==1? $s3fr:=2 P(s3_richtig2) J(spiel3_naechstefrage)
+  - $s3fr==2? $s3fr:=3 P(s3_richtig1) J(spiel3_naechstefrage)
+  - $s3fr==3? J(spiel3_falsch)
+  s3-quadrat:
+  - $s3ge==0? P(s5_erstgeschichte)
+  - $s3fr==0? $s3fr:=1 P(s3_richtig1) J(spiel3_naechstefrage)
+  - $s3fr==1? $s3fr:=2 J(spiel3_falsch)
+  - $s3fr==2? $s3fr:=3 J(spiel3_falsch)
+  - $s3fr==3? P(s3_anweisung)
+  spiel3:
+  - P(s3_spiel) J(spiel3_naechstefrage)
+  spiel3_falsch:
+  - $s3fr==3? P(s3_falsch2) J(s3_restart)
+  - $s3ff==0? $s3ff:=1 P(s3_falsch1) J(spiel3_naechstefrage)
+  - $s3ff==1? P(s3_falsch2) J(s3_restart)
+  spiel3_naechstefrage:
+  - $s3fr==0? P(s3_frag1)
+  - $s3fr==1? P(s3_frag2)
+  - $s3fr==2? P(s3_frag3)
+  - $s3fr==3? P(s3_frag4)
+  # Station 4:
+  s4-play:
+  - P(s4_play) P(s4_anweisung)
+  s4-hirte:
+  - P(s4_hirte)
+  # Station 5:
+  # Lade die Freunde zur Party ein
+  s5-play:
+  - P(s5_play) $s5ge:=1 J(spiel5)
+  s5-restart:
+  - $s5c:=0 $s5f1:=0 $s5f2:=0 $s5f3:=0 $s5f4:=0 J(spiel5)
+  s5-hirte:
+  - P(s5_hirte)
+  s5-freund1:
+  - $s5ge==0? P(s5_erstgeschichte)
+  - $s5f1==0? $s5f1:=1 J(spiel5_fund)
+  - $s5f1==1? P(s5_nochmal)
+  s5-freund2:
+  - $s5ge==0? P(s5_erstgeschichte)
+  - $s5f2==0? $s5f2:=1 J(spiel5_fund)
+  - $s5f2==1? P(s5_nochmal)
+  s5-freund3:
+  - $s5ge==0? P(s5_erstgeschichte)
+  - $s5f3==0? $s5f3:=1 J(spiel5_fund)
+  - $s5f3==1? P(s5_nochmal)
+  s5-freund4:
+  - $s5ge==0? P(s5_erstgeschichte)
+  - $s5f4==0? $s5f4:=1 J(spiel5_fund)
+  - $s5f4==1? P(s5_nochmal)
+  spiel5:
+  - P(s5_spiel)
+  spiel5_fund:
+  - $s5c==0? $s5c:=1 P(s5_fund1)
+  - $s5c==1? $s5c:=2 P(s5_fund2)
+  - $s5c==2? $s5c:=3 P(s5_fund3)
+  - $s5c==3? P(s5_fund4) P(s5_anweisung)
+  # Final:
+  s6-play:
+  - P(s6_play) P(s0_maeh)
+# Codezuweisung
+scriptcodes:
+  s0-hilfe: 7001
+  s0-play: 7002
+  s1-play: 7003
+  s1-restart: 7004
+  s1-blind: 7005
+  s1-fehler-gras: 7006
+  s1-fehler-schaf: 7007
+  s1-fehler-bein: 7008
+  s1-fehler-schuh: 7009
+  s1-fehler-auge: 7010
+  s2-play: 7011
+  s2_restart: 7012
+  s2-stab: 7013
+  s2-schuhe: 7014
+  s2-bogen: 7015
+  s2-seil: 7016
+  s2-ball: 7017
+  s2-saebel: 7018
+  s2-trompete: 7019
+  s2-hund: 7020
+  s3-play: 7021
+  s3_restart: 7022
+  s3-stern: 7023
+  s3-quadrat: 7024
+  s4-play: 7025
+  s5-play: 7026
+  s5-restart: 7027
+  s5-freund1: 7028
+  s5-freund2: 7029
+  s5-freund3: 7030
+  s5-freund4: 7031
+  s6-play: 7032
+  s0-maeh: 7040
+  s0-hirte: 7041
+  s4-hirte: 7042
+  s3-hirte: 7043
+  s5-hirte: 7044
+# speak:
+#  - language: de
+#    s0_anweisung: "Auch ihr geht jetzt mit los. Die nächste Station findet ihr an [...]."
+#    s1_anweisung: "Folgt dem Hirten schnell zu [...]."
+#    s2_anweisung: "Die nächste Station findet ihr [...]."
+#    s3_anweisung: "Ja, da ist das Schaf. Da vorne am [...], könnt ihr es schon sehn?"
+#    s4_anweisung: "Das Haus des Hirten findet ihr in [...]. Auf geht's. Der Hirte kann es gar nicht erwarten."
+#    s5_anweisung: "Auch ihr braucht noch ein Partyaccessoire, also schnell noch die Kiste beim Startpunkt finden."
