@@ -1,6 +1,6 @@
 # Das verlorene Schaf - Rallye
 
-Eine Rallye für Kinder (etwa 4-8 Jahre) zum Gleichnis vom verlorenen Sohn ([Lukasevangelium 15,3-7](http://www.bibleserver.com/text/GNB/Lukas15,3-7)]) über 6 Stationen die mit dem TipToi-Stift gepielt wird.
+Eine Rallye für Kinder (etwa 4-8 Jahre) zum Gleichnis vom verlorenen Sohn ([Lukasevangelium 15,3-7](http://www.bibleserver.com/text/GNB/Lukas15,3-7)) über 6 Stationen die mit dem TipToi-Stift gepielt wird.
 
 
 <center>[![Creative Commons Lizenzvertrag](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
