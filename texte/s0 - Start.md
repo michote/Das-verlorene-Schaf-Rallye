@@ -21,7 +21,7 @@ So, lasst uns loslegen: Berührt den grünen Pfeil mit dem tiptoi.
 Nun geht es los. Hört gut zu:
 Einmal erzählte Jesus eine Geschichte. Er erzählte sie, weil er zeigen wollte, dass ihm alle Menschen wichtig sind. Auch du!
 Aber nun zur Geschichte:
-Da war einmal ein Hirte, der hatte hundert Schafe. Eine ganz schöne Menge. 100, das sind 10 mal 2 Hände voll. Aber er kannte jedes Einzelne gut. Kannte seinen Namen und liebte jedes Einzelne sehr.
+Da war einmal ein Hirte, der hatte hundert Schafe. Eine ganz schöne Menge. 100, das sind 10 mal 2 Hände voll. Aber er kannte jedes Einzelne gut, kannte seinen Namen und liebte jedes Einzelne sehr.
 Jeden Tag bringt der Hirte die Schafe auf die Wiese. Denn Schafe essen sehr gerne frisches grünes Gras. Aber dann ist schnell auch mal eine Wiese abgegrast und die Schafe haben trotzdem noch Hunger. Der Hirte macht sich also mit den Schafen auf den Weg neues, frisches Gras zu finden...
 
 ## s0_anweisung

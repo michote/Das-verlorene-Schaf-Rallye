@@ -17,7 +17,7 @@ An einem Busch hängt Watte, an einem anderen etwas Wolle. Welcher Spur wollt ih
 Auf dem Boden liegen einige Köttel, auf der anderen Seite ein großer Haufen. Iiihh das stinkt. Aber Welcher Spur wollt ihr folgen? Für die Köttel berührt den Stern, für den Haufen das Quadrat.
 
 ## s3_frag3
-Hier ist etwas Gras abgefressen dort liegt eine Brötchentüte. Welcher Spur soll der Hirte nachgehen. Für das abgefressene Gras berührt den Stern, für die Brötchen-Tüte das Quadrat.
+Hier ist etwas Gras abgefressen dort liegt eine Brötchentüte. Welcher Spur soll der Hirte nachgehen. Für das abgefressene Gras berührt den Stern, für die Brötchentüte das Quadrat.
 
 ## s3_frag4
 Jetzt wird es kniffelig. Der Hirte findet mehrere Fußspuren. Er erkennt einen Fußabdruck mit 5 Zehen, der geht in die eine Richtung, einen anderen mit nur 2 Zehen. Die Spur geht in die andere Richtung. Welcher wollen wir folgen? Für den Fußabdruck mit 5 Zehen berührt den Stern, für den Fußabdruck mit 2 Zehen das Quadrat.
@@ -32,7 +32,7 @@ Genau. Ich sehe schon die nächsten Spur.
 Ob das so richtig war? Mal sehen vielleicht finden wir noch eine Spur.
 
 ## s3_falsch2
-Ich denke, wir sind in der Falschen Richtung unterwegs. Wir gehen lieber noch mal zurück zur ersten Spur.
+Ich denke, wir sind in der falschen Richtung unterwegs. Wir gehen lieber noch mal zurück zur ersten Spur.
 
 ## s3_anweisung
-Ja, da vorne ist das Schaf. Da vorne an den Fächern der Gemeinde muss es sein.
+Ja, da vorne ist das Schaf. Da vorne an den Fächern der Gemeinde, könnt ihr es schon sehn?
