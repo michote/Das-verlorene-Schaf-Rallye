@@ -2,7 +2,7 @@
 
 
 ## s1_play: oid-7003
-Da geht es also durch Täler und manchmal auch auf einen Berg. Da gibt es auch Bäche und manche Schluchten. Der Hirte muss gut auf seine Schafe aufpassen. Aber zum Glück kennt er sich hier aus und hat auch seinen Hund dabei, der ihm hilft, dass alle Schafe gut mitkommen. Er hat sich noch nie verlaufen, aber etwas ist gerade schon komisch...
+Da geht es also durch Täler und manchmal auch auf einen Berg. Da gibt es auch Bäche und manche Schluchten. Der Hirte muss gut auf seine Schafe aufpassen. Aber zum Glück kennt er sich hier bestens aus und hat auch seinen Hund dabei, der ihm hilft, dass alle Schafe gut mitkommen. Er hat sich noch nie verlaufen, aber etwas ist gerade schon komisch...
 
 ## s1_spiel
 Helft dem Hirten es herauszufinden und schaut genau hin: Findet alle fünf Fehler im unteren Bild und tippt sie mit dem Tiptoi an.

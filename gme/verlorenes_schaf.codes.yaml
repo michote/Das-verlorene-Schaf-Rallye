@@ -9,13 +9,22 @@
 # use different codes for your scripts, and you might have to re-
 # create the images for your product.
 scriptcodes:
+  s3_richtig1: 4734
+  s1_nochmal: 4726
+  s5_play2: 4738
   spiel2_falsch: 4720
   spiel5_fund: 4725
   spiel3: 4721
+  s2_play2: 4731
   spiel3_naechstefrage: 4724
+  s3_play2: 4733
   spiel2: 4719
   spiel3_falsch: 4722
+  s2_nochmal: 4729
   spiel1_fund: 4717
+  s3_richtig2: 4735
   spiel2_fund: 4718
   spiel1: 4716
+  s1_play2: 4727
+  s5_nochmal: 4736
   spiel5: 4723

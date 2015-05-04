@@ -2,6 +2,7 @@
 
 Eine Rallye für Kinder (etwa 4-8 Jahre) zum Gleichnis vom verlorenen Sohn ([Lukasevangelium 15,3-7](http://www.bibleserver.com/text/GNB/Lukas15,3-7)) über 6 Stationen die mit dem TipToi-Stift gepielt wird.
 
+Zum erstellen einer personalisierten .gme-Datei ist das [tttool](https://github.com/entropia/tip-toi-reveng) von Nöten.
 
 ![Start](http://michote.github.io/Schaf-Start.svg)
 
